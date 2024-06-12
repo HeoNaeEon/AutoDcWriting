@@ -23,13 +23,10 @@ while i < len(txt):
  try:
   async def run():
    rand_str = ""
-   rand_str2 = ""
    a = ""
    j=0
    for k in range(len(sendtxt)):
     rand_str += str(random.choice(string.ascii_uppercase + string.digits))
-   for g in range(len(sendtxt)):
-    rand_str2 += str(random.choice(string.ascii_uppercase + string.digits))
    lst = list(rand_str)
    finaltxt = list(sendtxt)
    while j < len(lst):
@@ -38,7 +35,7 @@ while i < len(txt):
    name = fake.name()
    password  = fake.password()
    title = a
-   content = "ㅇ"+rand_str2
+   content = fake.company()+fake.job()
    proxy = "http://"+txt[i]
    api = dc_api.API()
    doc_id = await api.write_document(board_id=gel, title=title, contents=content, name=name, password=password,pr=proxy,is_minor=minor)
