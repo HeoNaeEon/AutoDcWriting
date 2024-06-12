@@ -1,4 +1,4 @@
-1. pip3 install dc-api
+1. pip3 install dc-api, pip3 install filetype, pip3 install requests, pip3 install Faker
 
 2. pip3 show dc-api
 
