@@ -8,6 +8,7 @@ import string
 
 gel = input("id : ")
 minor = input("is minor? : ")
+sendtxt = input("message : ")
 
 print("auto writing... result in page..")
 
@@ -15,7 +16,6 @@ i=0
 res = requests.get("https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt")
 txt = res.text.split("\n")
 fake = Faker('ko_KR')
-sendtxt = "요한슈미츠는가해자"
 random.shuffle(txt)
 
 while i < len(txt):
@@ -33,7 +33,6 @@ while i < len(txt):
    while j < len(lst):
     a += finaltxt[j] + lst[j]
     j=j+1
-   print(a)
    name = fake.name()
    password  = fake.password()
    title = a
