@@ -514,7 +514,7 @@ class API:
             "_ga": "GA1.2.693521455.1588839880",
             }
         try:
-         async with self.session.post(url, headers=header, data=payload, cookies=cookies,proxy=pr,timeout=5) as res:
+         async with self.session.post(url, headers=header, data=payload, cookies=cookies,proxy=pr,timeout=1) as res:
              res = await res.text()
         finally:
              await self.session.close()
