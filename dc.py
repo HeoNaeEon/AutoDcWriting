@@ -27,7 +27,6 @@ random.shuffle(pp)
 
 gel = input("id : ")
 minor = input("is minor? : ")
-sendtxt = input("message : ")
 
 print("auto writing... result in page..")
 
@@ -35,20 +34,10 @@ while jj < len(pp):
  print(str(jj)+"/"+str(len(pp))+" "+"("+str(pp[jj])+")")
  try:
   async def run():
-   rand_str = ""
-   a = ""
-   j=0
-   for k in range(len(sendtxt)):
-    rand_str += str(random.choice(string.ascii_uppercase + string.digits))
-   lst = list(rand_str)
-   finaltxt = list(sendtxt)
-   while j < len(lst):
-    a += finaltxt[j] + lst[j]
-    j=j+1
    name = fake.name()
    password  = fake.password()
-   title = a
-   content = fake.company()+fake.job()
+   title = ""
+   content = "https://m.blog.naver.com/baeyoneta/223685668015"
    proxy = "http://"+pp[jj]
    api = dc_api.API()
    doc_id = await api.write_document(board_id=gel, title=title, contents=content, name=name, password=password,pr=proxy,is_minor=minor)
