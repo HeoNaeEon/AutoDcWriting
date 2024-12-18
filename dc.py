@@ -26,9 +26,6 @@ while i < len(txt)-1:
 
 random.shuffle(pp)
 
-gel = input("id : ")
-minor = input("is minor? : ")
-
 print("auto writing... result in page..")
 
 while jj < len(pp):
@@ -37,6 +34,8 @@ while jj < len(pp):
   async def run():
    name = fake.name()
    password  = fake.password()
+   gel = "loan_new1"
+   minor = False
    title = "okx 돈 많이 줌"
    content = "https://m.blog.naver.com/baeyoneta/223685668015"
    proxy = "http://"+pp[jj]
