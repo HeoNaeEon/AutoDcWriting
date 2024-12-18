@@ -1,3 +1,4 @@
+import asyncio
 import dc_api
 import requests
 import random
@@ -36,13 +37,13 @@ while jj < len(pp):
   async def run():
    name = fake.name()
    password  = fake.password()
-   title = ""
-   content = ""
+   title = "okx 돈 많이 줌"
+   content = "https://m.blog.naver.com/baeyoneta/223685668015"
    proxy = "http://"+pp[jj]
    api = dc_api.API()
    doc_id = await api.write_document(board_id=gel, title=title, contents=content, name=name, password=password,pr=proxy,is_minor=minor)
    await api.close()
-  await run()
+  asyncio.run(run())
   jj=jj+1
  except:
   jj=jj+1
