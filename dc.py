@@ -37,7 +37,7 @@ while jj < len(pp):
    name = fake.name()
    password  = fake.password()
    title = ""
-   content = "https://m.blog.naver.com/baeyoneta/223685668015"
+   content = ""
    proxy = "http://"+pp[jj]
    api = dc_api.API()
    doc_id = await api.write_document(board_id=gel, title=title, contents=content, name=name, password=password,pr=proxy,is_minor=minor)
