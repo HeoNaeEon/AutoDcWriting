@@ -1,4 +1,4 @@
-   0. git clone
+   0. git clone https://github.com/HeoNaeEon/AutoDcWriting/
    1. pip install dc-api,filetype,Faker,requests
    2. pip show dc-api
    3. rm /2.에 나온 로케이션/dc_api.py
