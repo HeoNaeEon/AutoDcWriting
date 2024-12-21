@@ -7,12 +7,14 @@ from faker import Faker
 
 i=0
 jj=0
+z=0
+
 res = requests.get("https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt")
 res2 = requests.get("https://raw.githubusercontent.com/HeoNaeEon/AutoDcWriting/refs/heads/main/ip.txt")
 txt = res.text.split("\n")
 txt2 = res2.text.split("\n")
 pp = []
-
+zz = []
 fake = Faker('ko_KR')
 
 while i < len(txt)-1:
@@ -24,6 +26,12 @@ while i < len(txt)-1:
 
 random.shuffle(pp)
 
+while z < len(pp):
+ nk2 = pp[z].split(":")
+ if nk2[1] == "80":
+  zz.append(nk2)
+ z=z+1
+ 
 gel2 = input("ID : ")
 minor2 = input("MINOR : ").lower().strip()
 title2 = input("TITLE : ")
@@ -31,8 +39,8 @@ content2 = input("CONTENT : ")
 
 print("auto writing... result in page..")
 
-while jj < len(pp):
- print(str(jj)+"/"+str(len(pp))+" "+"("+str(pp[jj])+")")
+while jj < len(zz):
+ print(str(jj)+"/"+str(len(zz))+" "+"("+str(zz[jj])+")")
  try:
   async def run():
    name = "ㅇㅇ"
@@ -41,7 +49,7 @@ while jj < len(pp):
    minor = minor2
    title = title2
    content = content2
-   proxy = "http://"+pp[jj]
+   proxy = "http://"+zz[jj]
    api = dc_api.API()
    doc_id = await api.write_document(board_id=gel, title=title, contents=content, name=name, password=password,pr=proxy,is_minor=minor)
    await api.close()
