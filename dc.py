@@ -29,7 +29,8 @@ random.shuffle(pp)
 while z < len(pp):
  nk2 = pp[z].split(":")
  if nk2[1] == "80":
-  zz.append(nk2)
+  kk2 = ".".join(nk2)
+  zz.append(kk2)
  z=z+1
  
 gel2 = input("ID : ")
