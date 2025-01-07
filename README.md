@@ -10,5 +10,7 @@
 
 5.write_document("갤러리ID","제목","내용",마이너 갤러리면 True 아니면 False)
 
+6.python dc.py
+
 
 
